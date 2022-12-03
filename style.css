@@ -1,3 +1,70 @@
-/*
-
-*/
+body {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: #111;
+    color: white;
+    padding: 20px 50px;
+  }
+  
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  
+  .searchInput {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .searchInput::placeholder {
+    color: lightgray;
+  }
+  
+  .limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+  }
+  
+  .navButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .slider {
+    background: url("/image/mockup-photos-_2_I561JOM8-unsplash.jpg");
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
+  }
+  
+  .sliderWrapper {
+    display: flex;
+    width: 500vw;
+  }
+  
+  .sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .sliderTitle {
+    position: absolute;
+    top: 0;
+    color: white;
+  }
