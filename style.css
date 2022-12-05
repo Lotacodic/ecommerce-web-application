@@ -93,3 +93,61 @@ body {
     width: 50%;
     height: 100px;
   }
+
+  .productDetails {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+
+  .productTitle {
+    font-size: 75px;
+    font-size: 900;
+  }
+
+  .productDesc {
+    font-style: 24px;
+    color: gray;
+  }
+
+  .color, .sizes {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;;
+  }
+
+  .color:last-child {
+    background-color: darkblue;
+  }
+
+  .size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .productButton:hover {
+    background-color: white;
+    color: black;
+  }
