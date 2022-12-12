@@ -1,11 +1,11 @@
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: sans-serif;
   padding: 0;
-  margin:0;
+  margin: 0;
 }
 
 nav {
@@ -58,7 +58,7 @@ nav {
 
 .slider {
   background: url(/images/bg.jpg);
-/*  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
+  /*  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
 }
 
 .sliderWrapper {
@@ -168,17 +168,17 @@ nav {
 }
 
 .features {
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
 }
 
 .feature {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .featureImg {
@@ -217,11 +217,12 @@ text-align: center;
   padding: 10px 50px;
   display: none;
   flex-direction: column;
-  -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87); 
-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+  -webkit-box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
 }
 
-.payTitle, .paymentTitle {
+.payTitle,
+.paymentTitle {
   font-size: 20px;
   color: lightgray;
 }
@@ -246,8 +247,8 @@ box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
 }
 
 .cardInfo {
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .sm {
@@ -260,8 +261,8 @@ justify-content: space-between;
   bottom: -40px;
   width: 100%;
   left: 0;
-  -webkit-box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87); 
-  box-shadow: 0px 0px 27px -3px rgba(0,0,0,0.87);
+  -webkit-box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
   background-color: #05aa13;
   color: white;
   border: none;
@@ -274,7 +275,7 @@ justify-content: space-between;
 }
 
 .close {
-  width:20px;
+  width: 20px;
   height: 20px;
   position: absolute;
   background-color: black;
@@ -309,7 +310,8 @@ justify-content: space-between;
   color: gray;
 }
 
-.colors, .sizes {
+.colors,
+.sizes {
   display: flex;
   margin-bottom: 20px;
 }
@@ -347,4 +349,18 @@ justify-content: space-between;
 .productButton:hover {
   background-color: white;
   color: black;
+}
+
+.gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+.galleryImg {
+  width: 100%;
 }
