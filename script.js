@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     title: "Air Force",
-    price: 199,
+    price: 79,
     colors: [
       {
         code: "black",
@@ -20,7 +20,7 @@ const products = [
   {
     id: 2,
     title: "Air Jordan",
-    price: 299,
+    price: 59,
     colors: [
       {
         code: "lightgray",
@@ -35,7 +35,7 @@ const products = [
   {
     id: 3,
     title: "Blazer",
-    price: 209,
+    price: 69,
     colors: [
       {
         code: "lightgray",
@@ -50,7 +50,7 @@ const products = [
   {
     id: 4,
     title: "Crater",
-    price: 109,
+    price: 39,
     colors: [
       {
         code: "black",
@@ -65,7 +65,7 @@ const products = [
   {
     id: 5,
     title: "Hippie",
-    price: 399,
+    price: 49,
     colors: [
       {
         code: "gray",
@@ -101,8 +101,9 @@ menuItems.forEach((item, index) => {
     currentProductPrice.textContent = "$" + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
 
+    //change color of choosenProduct
     currentProductColors.forEach((value, index) => {
-      color.style.backgroundColor = choosenProduct.colors[index].code;
+      value.style.backgroundColor = choosenProduct.colors[index].code;
     });
   });
 });
@@ -113,6 +114,7 @@ currentProductColors.forEach((color, index) => {
   });
 });
 
+//change color of product sizes button
 currentProductSizes.forEach((size, index) => {
   size.addEventListener("click", () => {
     currentProductSizes.forEach((size) => {
@@ -124,6 +126,7 @@ currentProductSizes.forEach((size, index) => {
   });
 });
 
+//make the modal responsive clicks
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");

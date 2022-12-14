@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -11,7 +12,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Josh Store</title>
+    <title>Sneakerly</title>
   </head>
   <body>
     <nav id="nav">
@@ -21,7 +22,7 @@
         </div>
         <div class="navItem">
           <div class="search">
-            <input type="text" placeholder="Search..." class="searchInput" />
+            <input id="searchBar" type="text" placeholder="Search..."  onkeyup="searchItems()" class="searchInput" />
             <img
               src="/images/search.png"
               width="20"
@@ -53,7 +54,7 @@
             NEW <br />
             SEASON
           </h1>
-          <h2 class="sliderPrice">$199</h2>
+          <h2 class="sliderPrice">$79</h2>
           <a href="#product">
             <button class="buyButton">BUY NOW!</button>
           </a>
@@ -67,7 +68,7 @@
             NEW <br />
             SEASON
           </h1>
-          <h2 class="sliderPrice">$299</h2>
+          <h2 class="sliderPrice">$59</h2>
           <a href="#product">
             <button class="buyButton">BUY NOW!</button>
           </a>
@@ -81,7 +82,7 @@
             NEW <br />
             SEASON
           </h1>
-          <h2 class="sliderPrice">$209</h2>
+          <h2 class="sliderPrice">$69</h2>
           <a href="#product">
             <button class="buyButton">BUY NOW!</button>
           </a>
@@ -95,7 +96,7 @@
             NEW <br />
             SEASON
           </h1>
-          <h2 class="sliderPrice">$109</h2>
+          <h2 class="sliderPrice">$39</h2>
           <a href="#product">
             <button class="buyButton">BUY NOW!</button>
           </a>
@@ -109,14 +110,14 @@
             NEW <br />
             SEASON
           </h1>
-          <h2 class="sliderPrice">$399</h2>
+          <h2 class="sliderPrice">$49</h2>
           <a href="#product">
             <button class="buyButton">BUY NOW!</button>
           </a>
         </div>
       </div>
     </div>
-    <div class="features">
+    <div class="features" id="help">
       <div class="feature">
         <img src="/images/shipping.png" alt="" class="featureImg" />
         <span class="featureTitle">FREE SHIPPING</span>
@@ -150,10 +151,7 @@
         <h1 class="productTitle">AIR FORCE</h1>
         <h2 class="productPrice">$119</h2>
         <p class="productDesc">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
-          nisi corrupti nam animi officia voluptatem explicabo error mollitia
-          recusandae, repellendus veritatis non nihil enim alias obcaecati
-          assumenda illo aliquam totam?
+          Sneakerly offers a broad range of sample sneakers that are affordable, allowing you to save money on your purchase. Suppliers and wholesalers of sample sneakers can take advantage of the lucrative deals at regular intervals. OEM and ODM orders are accepted on requests with customized logo as well as packaging. 
         </p>
         <div class="colors">
           <div class="color"></div>
@@ -233,7 +231,7 @@
         <h1 class="nsTitle">New Season</h1>
         <h1 class="nsTitle">New Collection</h1>
         <a href="#nav">
-          <button class="nsButton" id>CHOOSE YOUR STYLE</button>
+          <button class="nsButton">CHOOSE YOUR STYLE</button>
         </a>
       </div>
       <div class="nsItem">
@@ -247,57 +245,60 @@
       </div>
     </div>
     <footer>
-      <div class="footerLeft">
+      <div class="footercontainer">
 
         <div class="footerMenu">
           <h1 class="fMenuTitle">About Us</h1>
           <ul class="fList">
-            <li class="fListItem">Company</li>
-            <li class="fListItem">Contact</li>
-            <li class="fListItem">Careers</li>
-            <li class="fListItem">Affiliates</li>
-            <li class="fListItem">Stores</li>
+            <li class="fListItem"><a href="#help" class="a">Company</a></li>
+            <li class="fListItem"><a href="#help" class="a">Contact</a></li>
+            <li class="fListItem"><a href="#help" class="a">Careers</a></li>
+            <li class="fListItem"><a href="#help" class="a">Affiliates</a></li>
+            <li class="fListItem"><a href="#help" class="a">Stores</a></li>
           </ul>
         </div>
 
         <div class="footerMenu">
           <h1 class="fMenuTitle">Useful Links</h1>
           <ul class="fList">
-            <li class="fListItem">Support</li>
-            <li class="fListItem">Refund</li>
-            <li class="fListItem">FAQ</li>
-            <li class="fListItem">Feedback</li>
-            <li class="fListItem">Stories</li>
+            <li class="fListItem"><a href="#help" class="a">Support</a></li>
+            <li class="fListItem"><a href="#help" class="a">Refund</a></li>
+            <li class="fListItem"><a href="#help" class="a">FAQ</a></li>
+            <li class="fListItem"><a href="#help" class="a">Feedback</a></li>
+            <li class="fListItem"><a href="#help" class="a">Stories</a></li>
           </ul>
         </div>
 
         <div class="footerMenu">
           <h1 class="fMenuTitle">Products</h1>
           <ul class="fList">
-            <li class="fListItem">Air Force</li>
-            <li class="fListItem">Air Jordan</li>
-            <li class="fListItem">Blazer</li>
-            <li class="fListItem">Crater</li>
-            <li class="fListItem">Hippie</li>
+            <li class="fListItem"><a href="#nav" class="a">Air Force</a></li>
+            <li class="fListItem"><a href="#nav" class="a">Air Jordan</a></li>
+            <li class="fListItem"><a href="#nav" class="a">Blazer</a></li>
+            <li class="fListItem"><a href="#nav" class="a">Crater</a></li>
+            <li class="fListItem"><a href="#nav" class="a">Hippie</a></li>
           </ul>
         </div>
 
-          <div class="footerMenu">
+          <div class="Subscribe">
             <h1 class="fMenuTitle">Subscribe to our newsletter</h1>
             <div class="fMail">
               <input type="text" placeholder="your@gmail.com" class="fInput" />
               <button class="fButton">Join!</button>
             </div>
-          
+
+            <div class="follow">
               <h1 class="fMenuTitle">Follow Us</h1>
               <u class="fIcons">
-               <l class="fListItem"><img src="/images/facebook.png" alt="" class="fIcon" /></l>
-                <l class="fListItem"><img src="/images/twitter.png" alt="" class="fIcon" /></l>
-                <l class="fListItem"><img src="/images/instagram.png" alt="" class="fIcon" /></l>
-                <l class="fListItem"><img src="/images/whatsapp (1).png" alt="" class="fIcon" /></l>
+               <l class="fListItem"><a href="https://twitter.com/lotacodic" target="_blank"><img src="/images/facebook.png" alt="" class="fIcon" /></a></l>
+                <l class="fListItem"><a href="https://twitter.com/lotacodic" target="_blank"><img src="/images/twitter.png" alt="" class="fIcon" /></a></l>
+                <l class="fListItem"><a href="https://twitter.com/lotacodic" target="_blank"><img src="/images/instagram.png" alt="" class="fIcon" /></a></l>
+                <l class="fListItem"><a href="https://twitter.com/lotacodic" target="_blank"></a><img src="/images/whatsapp (1).png" alt="" class="fIcon" /></a></l>
               </u>
+            </div>
+            <div class="copy">
             <span class="copyright"
-              >@lotacodic Dev. All rights reserved. 2022.</span
+              >&#169; Lotacodic Dev.  All Rights reserved. 2022.</span
             >
           </div>
 
