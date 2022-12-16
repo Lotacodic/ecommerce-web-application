@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     title: "Air Force",
-    price: 79,
+    price: 109,
     colors: [
       {
         code: "black",
@@ -125,7 +125,7 @@ currentProductSizes.forEach((size, index) => {
     size.style.color = "white";
   });
 });
-
+/*
 //make the modal responsive clicks
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
@@ -136,3 +136,4 @@ productButton.addEventListener("click", () => [
 ]);
 
 close.addEventListener("click", () => [(payment.style.display = "none")]);
+*/

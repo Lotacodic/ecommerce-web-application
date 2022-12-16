@@ -62,7 +62,8 @@ nav {
 
 .slider {
   background: url(/images/bgImg.jpg);
-  /*  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  overflow: hidden;
 }
 
 .sliderWrapper {
@@ -214,13 +215,10 @@ nav {
   background-color: white;
   position: absolute;
   top: 0;
-  bottom: -1;
-  left: 0;
+  bottom: 0;
   right: 0;
+  left: 0;
   margin: auto;
-  padding: 10px 50px;
-  display: none;
-  flex-direction: column;
   -webkit-box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
   box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
 }
@@ -402,11 +400,17 @@ nav {
   display: flex;
 }
 
-.footercontainer {
+.footerLeft {
   flex: 2;
   display: flex;
-  padding: 50px;
-  justify-content: space-between;
+  padding: 20px;
+  justify-content: space-betwee;
+}
+
+.footerRight {
+  flex: 2;
+  display: flex;
+  padding: 20px ;
 }
 
 .fMenuTitle {
@@ -438,9 +442,9 @@ nav {
   margin-top: 15px;
 }
 
-.fIcons {
+/*.fIcons {
   display: flex;
-}
+}*/
 
 .fIcon {
   height: 20px;
@@ -457,4 +461,121 @@ nav {
   font-size: 14px;
   margin-top: 15px;
   color: gray;
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    padding: 20px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .navBottom {
+    flex-wrap: wrap;
+  }
+
+  .menuItem {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .slider {
+    clip-path: none;
+  }
+
+  .sliderImg {
+    width: 90% ;
+  }
+
+  .sliderBg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .sliderTitle {
+    display: none;
+  }
+
+  .sliderPrice {
+    top: unset;
+    bottom: 0;
+    left: 0;
+    background-color: lightgrey;
+  }
+
+  .buyButton {
+    right: 0;
+    top: 0;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+
+  .product {
+    clip-path: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productImg {
+    width: 80%;
+  }
+
+  .productDetails {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+
+  .productTitle {
+    font-size: 50px;
+    margin: 0;
+  }
+  
+  .gallery {
+    display: none; 
+  }
+  .newSeason {
+    flex-direction: column;
+  }
+
+  .nsItem:nth-child(2) {
+    padding: 50px;
+  }
+  .nsItem:nth-child(1) {
+    margin-top: 350px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+.footerLeft {
+  padding: 20px;
+  width: 90%;
+}
+
+  .footerRight{
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: whitesmoke;
+    padding-top: 20px;
+  }
+
+  .payment {
+    top: 20;
+    bottom: 0;
+  }
+
 }
