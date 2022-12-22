@@ -62,7 +62,7 @@ nav {
 
 .slider {
   background: url(/images/bgImg.jpg);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
   overflow: hidden;
 }
 
@@ -117,7 +117,7 @@ nav {
   position: absolute;
   top: 50%;
   right: 10%;
-  font-size: 60px;
+  font-size: 30px;
   font-weight: 300;
   text-align: center;
   color: white;
@@ -206,7 +206,7 @@ nav {
   height: 100vh;
   background-color: whitesmoke;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  /*clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);*/
 }
 
 .payment {
@@ -216,21 +216,25 @@ nav {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
   left: 0;
+  right: 0;
   margin: auto;
-  -webkit-box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
-  box-shadow: 0px 0px 27px -3px rgba(0, 0, 0, 0.87);
+  padding: 10px 50px;
+  display: none;
+  flex-direction: column;
 }
 
-.payTitle,
-.paymentTitle {
+.payTitle {
   font-size: 20px;
   color: lightgray;
 }
 
+.label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .payInput {
-  padding: 10px;
   margin: 10px 0px;
   border: none;
   border-bottom: 1px solid gray;
@@ -269,11 +273,6 @@ nav {
   color: white;
   border: none;
   cursor: pointer;
-}
-
-.label {
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .close {
@@ -401,20 +400,26 @@ nav {
 }
 
 .footerLeft {
-  flex: 2;
   display: flex;
   padding: 20px;
-  justify-content: space-betwee;
+  justify-content: space-between;
 }
 
 .footerRight {
-  flex: 2;
   display: flex;
-  padding: 20px ;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: black;
 }
 
-.fMenuTitle {
-  font-size: 16px;
+.fleftTitle {
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.frightTitle {
+  font-size: 20px;
+  color: white;
 }
 
 .fList {
@@ -433,9 +438,14 @@ nav {
 }
 
 .fButton {
-  padding: 5px;
+  background-color: white;
+  color: black;
+}
+
+.fButton:hover {
   background-color: black;
   color: white;
+  cursor: pointer;
 }
 
 .follow {
@@ -450,17 +460,18 @@ nav {
   height: 20px;
   width: 20px;
   margin-right: 10px;
+  background-color: white;
 }
 
 .copy {
-  margin-top: 15px;
+  background-color: lightgrey;
 }
-
 .copyright {
-  font-weight: 300;
   font-size: 14px;
-  margin-top: 15px;
+  font-weight: 300;
   color: gray;
+  margin-bottom: 50px;
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 480px) {
@@ -487,7 +498,7 @@ nav {
   }
 
   .sliderImg {
-    width: 90% ;
+    width: 90%;
   }
 
   .sliderBg {
@@ -515,6 +526,10 @@ nav {
     flex-direction: column;
   }
 
+  .featureDesc {
+    text-align: center;
+  }
+
   .product {
     clip-path: none;
     display: flex;
@@ -528,7 +543,7 @@ nav {
 
   .productDetails {
     width: 100%;
-    padding: 0;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -540,9 +555,9 @@ nav {
     font-size: 50px;
     margin: 0;
   }
-  
+
   .gallery {
-    display: none; 
+    display: none;
   }
   .newSeason {
     flex-direction: column;
@@ -551,6 +566,7 @@ nav {
   .nsItem:nth-child(2) {
     padding: 50px;
   }
+
   .nsItem:nth-child(1) {
     margin-top: 350px;
   }
@@ -560,22 +576,23 @@ nav {
     align-items: center;
   }
 
-.footerLeft {
-  padding: 20px;
-  width: 90%;
-}
+  .footerLeft {
+    padding: 20px;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-  .footerRight{
+  .footerRight {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: whitesmoke;
     padding-top: 20px;
+    background-color: black;
   }
 
   .payment {
-    top: 20;
-    bottom: 0;
+    width: 90%;
+    padding: 20px;
   }
-
 }

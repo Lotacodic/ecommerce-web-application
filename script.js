@@ -5,7 +5,7 @@ const products = [
   {
     id: 1,
     title: "Air Force",
-    price: 109,
+    price: 159,
     colors: [
       {
         code: "black",
@@ -20,7 +20,7 @@ const products = [
   {
     id: 2,
     title: "Air Jordan",
-    price: 59,
+    price: 129,
     colors: [
       {
         code: "lightgray",
@@ -35,7 +35,7 @@ const products = [
   {
     id: 3,
     title: "Blazer",
-    price: 69,
+    price: 119,
     colors: [
       {
         code: "lightgray",
@@ -50,7 +50,7 @@ const products = [
   {
     id: 4,
     title: "Crater",
-    price: 39,
+    price: 109,
     colors: [
       {
         code: "black",
@@ -65,7 +65,7 @@ const products = [
   {
     id: 5,
     title: "Hippie",
-    price: 49,
+    price: 99,
     colors: [
       {
         code: "gray",
@@ -92,11 +92,10 @@ menuItems.forEach((item, index) => {
     //change current slide
     wrapper.style.transform = `translateX(${-100 * index}vw)`;
 
-    //change the choosen product
+    //change the choosenProduct
     choosenProduct = products[index];
-    console.log(choosenProduct);
 
-    //change texts of currentProduct
+    //change title/price/image of choosenProduct
     currentProductTitle.textContent = choosenProduct.title;
     currentProductPrice.textContent = "$" + choosenProduct.price;
     currentProductImg.src = choosenProduct.colors[0].img;
@@ -108,6 +107,7 @@ menuItems.forEach((item, index) => {
   });
 });
 
+//change image of choosenProduct
 currentProductColors.forEach((color, index) => {
   color.addEventListener("click", () => {
     currentProductImg.src = choosenProduct.colors[index].img;
@@ -125,15 +125,16 @@ currentProductSizes.forEach((size, index) => {
     size.style.color = "white";
   });
 });
-/*
+
 //make the modal responsive clicks
 const productButton = document.querySelector(".productButton");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
 
-productButton.addEventListener("click", () => [
-  (payment.style.display = "flex"),
-]);
+productButton.addEventListener("click", () => {
+  payment.style.display = "flex";
+});
 
-close.addEventListener("click", () => [(payment.style.display = "none")]);
-*/
+close.addEventListener("click", () => {
+  payment.style.display = "none";
+});
